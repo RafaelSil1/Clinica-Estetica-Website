@@ -1012,3 +1012,16 @@ body {
 .footer-bottom a:hover {
     opacity: 0.8;
 }
+
+/* Estado inicial: escondido, transparente e deslocado 50px para baixo */
+.hidden-element {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Estado final: visível e na posição original */
+.show-element {
+    opacity: 1;
+    transform: translateY(0);
+}
