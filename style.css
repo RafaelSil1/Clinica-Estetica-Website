@@ -1,0 +1,719 @@
+/* RESET DE ESTILOS BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #ffffffc2;
+    /* Tom de fundo acinzentado/bege do mockup */
+    color: #1A1A1A;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+/* NAV BAR */
+.header-container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #FFFDFB;
+    padding: 15px 40px;
+    margin-bottom: 60px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    background-color: rgba(255, 253, 251, 0.39);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.082);
+}
+
+header {
+    margin: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1A1A1A;
+    font-size: 0.95rem;
+    font-weight: 400;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+    background: linear-gradient(45deg, gold, rgb(187, 135, 5));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-contact-nav {
+    background-color: #ffffff;
+    border: 1px solid gold;
+    text-decoration: none;
+    color: #1A1A1A;
+    padding: 10px 30px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.btn-contact-nav:hover {
+    background: linear-gradient(45deg, gold, rgb(226, 164, 6));
+    color: white;
+}
+
+/* HERO SECTION */
+.hero-container {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 80px;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    background: linear-gradient(45deg, gold, rgb(187, 135, 5));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #ffffff;
+    /* Tom taupe/rosê queimado do botão principal */
+    color: black;
+    border: 1px solid gold;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background: linear-gradient(45deg, gold, rgb(226, 164, 6));
+    color: white;
+}
+
+hr {
+    width: 1200px;
+    border: 1px solid gold;
+    margin: 30px 0px 40px 0px;
+}
+
+/* Placeholder para a foto principal */
+.hero-image-placeholder {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: right;
+}
+
+/* STATS SECTION */
+.stats-container {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+    padding: 0 20px;
+    margin-top: auto;
+    /* Empurra para o rodapé se houver espaço */
+}
+
+/* Bloco do Perfil Redondo */
+.profile-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    background-color: #FFFDFB;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+    padding: 10px;
+}
+
+.profile-info h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.profile-info p {
+    font-size: 0.9rem;
+    color: #1f1e1e;
+}
+
+.profile-info .crm-text {
+    color: #666;
+    margin-top: 2px;
+}
+
+/* Caixas de Números */
+.stat-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, gold, rgb(187, 135, 5));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #222;
+}
+
+.container-biografia {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 150px;
+    margin: 200px 0px 180px 0px;
+}
+
+/* Bloco da Imagem */
+.bloco-imagem {
+    flex: 1;
+    max-width: 400px;
+    /* Limita a largura máxima da foto */
+}
+
+/* Bloco de Texto */
+.bloco-texto {
+    flex: 1;
+    max-width: 500px;
+}
+
+.bloco-texto h1 {
+    font-size: 30px;
+    font-weight: 400px;
+    margin-bottom: 30px;
+    background: linear-gradient(45deg, gold, rgb(187, 135, 5));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.bloco-texto p {
+    font-size: 18px;
+    color: #585858;
+    line-height: 1.4;
+}
+
+
+/* Container Principal */
+.container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 50px;
+    align-items: center;
+}
+
+/* Seção de Texto (Esquerda) */
+.content-div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #333333;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, gold, rgb(187, 135, 5));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #4a4a4a;
+}
+
+/* Botão de Agendamento */
+.btn-schedule {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 25px;
+    gap: 8px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #333333;
+    border: 1px solid gold;
+    font-size: 1rem;
+    width: fit-content;
+    transition: opacity 0.2s;
+}
+
+.btn-schedule:hover {
+    background: linear-gradient(45deg, gold, rgb(187, 135, 5));
+    color: white;
+}
+
+.btn-schedule .icon {
+    font-size: 1.2rem;
+}
+
+/* Grade de Imagens (Direita) */
+.image-grid {
+    flex: 1.2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    /* Define a altura das linhas */
+    gap: 15px;
+}
+
+.grid-item {
+    width: 200px;
+}
+
+/* Ajuste do layout assimétrico dos blocos superiores */
+.item-1 {
+    grid-column: 1 / 2;
+
+}
+
+.item-2 {
+    grid-column: 2 / 4;
+    /* O segundo bloco da primeira fileira é mais largo */
+    width: 420px;
+    height: 200px;
+}
+
+/* Blocos inferiores ocupam 1 coluna cada naturalmente */
+.item-3 {
+    grid-column: 1 / 2;
+}
+
+.item-4 {
+    grid-column: 2 / 3;
+}
+
+.item-5 {
+    grid-column: 3 / 4;
+}
+
+
+.container-info {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1100px;
+    border-radius: 12px;
+    margin: 100px 0px 100px 0px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Divide a tela exatamente ao meio */
+    overflow: hidden;
+}
+
+/* Estilização do Lado Esquerdo */
+.info-container {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-text h1 {
+    font-size: 2.2rem;
+    background: linear-gradient(45deg, gold, rgb(187, 135, 5));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+}
+
+.header-text p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Lista de Contatos */
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Quadrado do Ícone */
+.icon-box {
+    width: 50px;
+    height: 50px;
+    background-color: #eef2f7;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: gold;
+    /* Cor roxo/azul moderna para os ícones */
+    flex-shrink: 0;
+}
+
+.text-box h3 {
+    font-size: 1.05rem;
+    color: #444;
+    margin-bottom: 2px;
+}
+
+.text-box p,
+.text-box a {
+    font-size: 0.95rem;
+    color: #777;
+    text-decoration: none;
+}
+
+.text-box a:hover {
+    color: #4f46e5;
+    text-decoration: underline;
+}
+
+/* Estilização do Lado Direito (Mapa) */
+.map-container {
+    padding: 40px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Placeholder cinza do mapa conforme seu rascunho */
+.map-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    background-color: #e2e8f0;
+    /* Cor cinza do rascunho */
+    border: 2px dashed gold;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.map-icon {
+    font-size: 3rem;
+}
+
+.map-placeholder span {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card-consulta {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+/* Área reservada para a foto */
+.foto-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    flex-shrink: 0;
+    /* Impede que a foto esmague em telas menores */
+}
+
+.foto-container span {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Lado direito do layout */
+.conteudo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.titulo {
+    font-size: 32px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    background: linear-gradient(45deg, gold, rgb(187, 135, 5));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitulo {
+    font-size: 16px;
+    color: #2c313c;
+    margin-bottom: 30px;
+}
+
+/* Estilização do Botão */
+.botao-agendar {
+    display: inline-block;
+    background-color: #ffffff;
+    /* Cor de fundo clara do botão */
+    color: #2c313c;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: 1px solid gold;
+    border-radius: 4px;
+    width: fit-content;
+    transition: background-color 0.2s ease;
+}
+
+/* Efeito de passar o mouse no botão */
+.botao-agendar:hover {
+    background: linear-gradient(45deg, gold, rgb(187, 135, 5));
+    color: white;
+}
+
+/* Configurações Gerais do Rodapé */
+footer {
+    width: 100%;
+    background-color: #d1cbc4;
+    font-family: Arial, sans-serif;
+    /* Fonte padrão limpa */
+    color: #333333;
+}
+
+/* Container principal para alinhar as colunas */
+.footer-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    background-color: rgba(255, 253, 251, 0.39);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.082);
+}
+
+/* Configuração comum para todas as colunas */
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    /* Centraliza o texto conforme a imagem */
+}
+
+/* Estilização do espaço do Logo */
+.logo-placeholder {
+    width: 150px;
+    height: 150px;
+    /* Cor do quadrado do logo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Estilização dos Textos (Títulos e Parágrafos) */
+.footer-column h3 {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 15px 0 5px 0;
+     background: linear-gradient(45deg, gold, rgb(187, 135, 5));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-column p,
+.footer-column ul {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    color: #4a4a4a;
+}
+
+/* Estilização da lista de navegação */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+/* Links (E-mail e Navegação) */
+.footer-column a {
+    text-decoration: none;
+    color: inherit;
+    /* Mantém a cor do texto padrão */
+    transition: opacity 0.2s;
+}
+
+.footer-column a:hover {
+    opacity: 0.7;
+    /* Efeito sutil ao passar o mouse */
+}
+
+
+
+/* Responsividade para telas menores (Tablets e Celulares) */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .image-grid {
+        width: 100%;
+        grid-template-rows: repeat(2, 140px);
+    }
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 768px) {
+    .menu-superior nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .container-biografia {
+        flex-direction: column;
+        /* Empilha a imagem acima do texto no celular */
+        text-align: center;
+        gap: 40px;
+        margin: 30px auto;
+    }
+
+    .bloco-texto h1 {
+        font-size: 32px;
+    }
+
+    .bloco-texto p {
+        font-size: 20px;
+    }
+}
+
+/* RESPONSIVIDADE (Para telas menores/Celulares) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-image-placeholder {
+        text-align: center;
+        order: -1;
+        /* Imagem fica no topo no mobile */
+        height: 200px;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .profile-block {
+        flex-direction: column;
+    }
+}
