@@ -4,50 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dra. Vera Lopes - Biomédica e Esteticista</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/f35b5640ea.js" crossorigin="anonymous"></script>
+    <title>Dra. Vera Lopes - Biomédica Esteta</title>
+    <link rel="stylesheet" href="style01.css">
+
+    <!-- Fontes do Google -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- IMPORTANTE: Adicionado Font Awesome para os ícones funcionarem -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
-    <header class="header-container" id="inicio">
-        <nav class="navbar">
-            <div class="logo">LOGO</div>
-            <ul class="nav-links">
-                <li><a href="#inicio">início</a></li>
-                <li><a href="#draVera">Dra. Vera</a></li>
-                <li><a href="#clinica">A Clínica</a></li>
-                <li><a href="#ondeEstamo">Onde Estamos</a></li>
-            </ul>
-            <a href="#" class="btn-contact-nav">Contato</a>
-        </nav>
-    </header>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="container">
 
-    <main class="hero-container" >
-        <div class="hero-content">
-            <h1 class="hero-title">DRA.<br>Vera Lopes</h1>
-            <p class="hero-subtitle">biomédica e esteticista em são miguel - sp,<br>Foco em Resultados</p>
-            <a href="#" class="btn-whatsapp">Entrar em contato por WhatsApp</a>
+            <div class="hero-content">
+                <div class="logo-area">
+                    <img src="logo.png" alt="Clínica Dra. Vera Lopes" class="logo">
+                </div>
+
+                <h1 class="main-title">
+                    Gerenciamento do <br>
+                    <span class="highlight-natural">envelhecimento</span> para mulheres que buscam <span
+                        class="serif-italic">elegância e alta precisão.</span>
+                </h1>
+
+                <p class="description">
+                    Através da biomedicina estética avançada e de uma análise facial detalhada, resgatamos a firmeza e a
+                    harmonia do seu rosto. Um plano exclusivo para suavizar o tempo e destacar sua melhor versão —
+                    com total sofisticação, zero excessos e sem transformações artificiais.
+                </p>
+
+                <a href="#" class="btn-cta">Quero entender meu caso</a>
+            </div>
+
+            <div class="hero-image-wrapper">
+                <img src="imagem/imagem-sem-fundo.png" alt="Dra. Vera Lopes" class="doctor-img">
+
+                <div class="floating-icon icon-dna">🧬</div>
+                <div class="floating-icon icon-heart">🤍</div>
+                <div class="floating-icon icon-plus">⁺</div>
+            </div>
+
         </div>
+    </section>
 
-        <div class="hero-image-placeholder">
-            <img src="imagem/imagem-sem-fundo.png" alt="" style="width: 450px;">
-        </div>
-    </main>
-
-    <hr>
-
+    <!-- STATS SECTION -->
     <section class="stats-container">
         <div class="profile-block">
             <div class="profile-avatar">
-                <img src="imagem/pexels-redwolf-44736300-12889997.jpg" alt=""
-                    style="width: 100px; border-radius: 400px;">
+                <img src="imagem/pexels-dan-778130763-25205116.jpg" alt="Dra. Vera Lopes"
+                    style="width: 100px; border-radius: 100px;">
             </div>
             <div class="profile-info">
                 <h3>DRA. Vera Lopes</h3>
-                <p>Biomédica</p>
-                <p class="crm-text">crm + rqe</p>
+                <p>Biomédica Esteta</p>
+                <p class="crm-text">CRBM nº XXXX</p> <!-- Ajustado de CRM para CRBM (Conselho de Biomedicina) -->
             </div>
         </div>
 
@@ -62,53 +78,145 @@
         </div>
     </section>
 
-    <!-- Criar uma seção depois para os cards com informações dos procedimentos -->
-
-
-    <section class="container-biografia" id="draVera">
-
-        <div class="bloco-imagem">
-            <img src="imagem/pexels-redwolf-44736300-12889997.jpg" alt="" style="width: 400px;">
+    <!-- TRANSFORMATIONS SECTION -->
+    <section class="transformations-section">
+        <div class="section-header">
+            <h2 class="section-title">
+                Transformações <span class="serif-italic">que revelam seu melhor</span>
+            </h2>
+            <p class="section-subtitle">
+                Confira os resultados naturais alcançados por nossos pacientes que receberam um tratamento personalizado
+                e humanizado.
+            </p>
         </div>
 
-        <div class="bloco-texto">
-            <h1>Dra. Vera Lopes: A Ciência Aliada à Arte da Estética</h1>
-            <p>No universo do autocuidado, a verdadeira beleza une saúde, ciência e autoestima. É exatamente nessa
-                interseção que atua a Dra. Vera Lopes, transformando vidas por meio da Biomedicina Estética.
+        <div class="carousel-container">
+            <button class="carousel-btn prev-btn" aria-label="Anterior">&#10094;</button>
 
-                Com sólida formação como biomédica especialista em estética, ela enxerga além da superfície. Sua atuação
-                é pautada pelo profundo conhecimento da fisiologia humana, permitindo tratar a pele, o envelhecimento e
-                o metabolismo de forma integrada. Para a Dra. Vera, cada procedimento é único, planejado meticulosamente
-                com base em evidências científicas e na individualidade de cada paciente.
+            <div class="carousel-track-wrapper">
+                <div class="carousel-track">
 
-                Ciência e Sensibilidade
-                O grande diferencial da profissional está na união entre o rigor clínico da Biomedicina e o olhar
-                humanizado da Estética. Longe de padrões inalcançáveis, seu objetivo é realçar a melhor versão de cada
-                pessoa, devolvendo a confiança de dentro para fora.
+                    <div class="transformation-card">
+                        <div class="image-pair">
+                            <img src="imagem/pexels-redwolf-44736300-12889997.jpg" alt="Antes - Fullface"
+                                class="before-img">
+                            <img src="imagem/pexels-redwolf-44736300-12889997.jpg" alt="Depois - Fullface"
+                                class="after-img">
+                        </div>
+                        <div class="card-overlay">
+                            <h3>FULLFACE</h3>
+                            <p>Dra. Vera Lopes</p>
+                        </div>
+                    </div>
 
-                Sempre atualizada, a Dra. Vera Lopes traz para o consultório o que há de mais inovador em tecnologia e
-                técnicas avançadas, sendo sinônimo de segurança, ética e excelência em cada atendimento.</p>
+                    <div class="transformation-card">
+                        <div class="image-pair">
+                            <img src="imagem/pexels-redwolf-44736300-12889997.jpg" alt="Antes - Fullface"
+                                class="before-img">
+                            <img src="imagem/pexels-redwolf-44736300-12889997.jpg" alt="Depois - Fullface"
+                                class="after-img">
+                        </div>
+                        <div class="card-overlay">
+                            <h3>FULLFACE</h3>
+                            <p>Dra. Vera Lopes</p>
+                        </div>
+                    </div>
+
+                    <div class="transformation-card">
+                        <div class="image-pair">
+                            <img src="imagem/pexels-redwolf-44736300-12889997.jpg" alt="Antes - Fullface"
+                                class="before-img">
+                            <img src="imagem/pexels-redwolf-44736300-12889997.jpg" alt="Depois - Fullface"
+                                class="after-img"> <!-- Corrigido aspas duplas sobressalentes -->
+                        </div>
+                        <div class="card-overlay">
+                            <h3>FULLFACE</h3>
+                            <p>Dra. Vera Lopes</p>
+                        </div>
+                    </div>
+
+                    <div class="transformation-card">
+                        <div class="image-pair">
+                            <img src="imagem/pexels-redwolf-44736300-12889997.jpg" alt="Antes - Fullface"
+                                class="before-img">
+                            <img src="imagem/pexels-redwolf-44736300-12889997.jpg" alt="Depois - Fullface"
+                                class="after-img">
+                        </div>
+                        <div class="card-overlay">
+                            <h3>FULLFACE</h3>
+                            <p>Dra. Vera Lopes</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <button class="carousel-btn next-btn" aria-label="Próximo">&#10095;</button>
         </div>
 
+        <div class="action-area">
+            <a href="#" class="btn-cta-dark">Quero ver como isso pode funcionar para mim</a>
+        </div>
     </section>
 
-    <section class="container" id="clinica">
+    <!-- ABOUT SECTION -->
+    <section class="about-section">
+        <div class="decor-line line-left"></div>
+        <div class="decor-line line-right"></div>
+
+        <div class="about-container">
+            <div class="about-image-wrapper">
+                <img src="imagem/pexels-redwolf-44736300-12889997.jpg" alt="Dra. Vera Lopes" class="about-img">
+            </div>
+
+            <div class="about-content">
+                <h2 class="about-title">
+                    Quem é a <br>
+                    <span class="serif-italic-bold">Dra. Vera Lopes?</span>
+                </h2>
+
+                <div class="about-text">
+                    <p>
+                        Biomédica especialista em Estética Avançada, com mais de 110 certificações nacionais e
+                        internacionais, a Dra. Vera Lopes é referência em gerenciamento do envelhecimento e
+                        rejuvenescimento facial natural.
+                    </p>
+                    <p>
+                        Com profundo conhecimento anatômico e técnicas modernas, utiliza uma abordagem que une ciência,
+                        precisão e sutileza para entregar resultados que respeitam sua identidade e valorizam sua beleza
+                        real.
+                    </p>
+                    <p>
+                        Além da atuação clínica, é idealizadora da linha de cosméticos <strong class="weight-600">Madame
+                            Lopes</strong>, com mais de 300 produtos de alta performance.
+                        <!-- Corrigido de Morato para Lopes conforme o nome da doutora -->
+                    </p>
+                </div>
+
+                <a href="#" class="btn-cta-about">Quero ser atendida pela Dra. Vera Lopes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLINIC / GALLERY SECTION -->
+    <!-- CORRIGIDO: mudado de "container" para "gallery-container" para conversar com o CSS -->
+    <section class="gallery-container">
         <div class="content-div">
-            <h1 class="title">
+            <h1 class="gallery-title">
                 Conheça a Clínica da Dra. Vera Lopes: referência em biomedicina estética em Artur Alvim - SP
             </h1>
 
-            <p class="text">
+            <p class="gallery-text">
                 Na Clínica Dra. Vera Lopes, unimos ciência, tecnologia e acolhimento para oferecer uma experiência em
-                biomedicina estética completa e personalizada.
+                biomédica estética completa e personalizada.
             </p>
 
-            <p class="text">
+            <p class="gallery-text">
                 Cada tratamento é realizado com rigor técnico e foco em resultados naturais, sempre respeitando a
                 individualidade e as necessidades de cada paciente.
             </p>
 
-            <p class="text">
+            <p class="gallery-text">
                 Aqui, cada pessoa é recebida com atenção, respeito e encanto, e será um prazer acompanhar sua jornada de
                 cuidado com a pele e a autoestima.
             </p>
@@ -119,63 +227,77 @@
         </div>
 
         <div class="image-grid">
-            <img src="imagem/img-horizontal.jpg" alt="" class="grid-item item-1">
-            <img src="imagem/img-quadrada.jpg" alt="" class="grid-item item-2">
-            <img src="imagem/img-quadrada02.jpg" alt="" class="grid-item item-3">
-            <img src="imagem/img-quadrda03.jpg" alt="" class="grid-item item-4">
-            <img src="imagem/img-quadrada04.jpg" alt="" class="grid-item item-5">
+            <img src="imagem/img-horizontal.jpg" alt="Ambiente da clínica" class="grid-item item-1">
+            <img src="imagem/img-quadrada.jpg" alt="Sala de atendimento" class="grid-item item-2">
+            <img src="imagem/img-quadrada02.jpg" alt="Detalhes da clínica" class="grid-item item-3">
+            <img src="imagem/img-quadrda03.jpg" alt="Equipamentos modernos" class="grid-item item-4">
+            <!-- Verifique se o nome do arquivo contém esse erro de digitação mesmo -->
+            <img src="imagem/img-quadrada04.jpg" alt="Recepção acolhedora" class="grid-item item-5">
         </div>
     </section>
 
-    <section class="container-info" id="ondeEstamo">
-        <div class="info-container">
-            <header class="header-text">
-                <h1>Agenda sua visita</h1>
-                <p>Estamos próximos de você, confira</p>
-            </header>
-
-            <div class="contact-list">
-                <div class="contact-item">
-                    <div class="icon-box">
-                        <i class="fa-solid fa-location-dot"></i>
-                    </div>
-                    <div class="text-box">
-                        <h3>Endereço</h3>
-                        <p>Av. Águia de Haia, 761 - Artur Alvim, São Paulo - SP, 08210-590</p>
-                    </div>
+    <!-- CONTACT / MAP SECTION -->
+    <section class="global">
+        <div class="container-info">
+            <div class="info-container">
+                <div class="header-text">
+                    <h1>Agende sua visita</h1>
+                    <p>Estamos próximos de você, confira</p>
                 </div>
 
-                <div class="contact-item">
-                    <div class="icon-box">
-                        <i class="fa-brands fa-instagram"></i>
+                <div class="contact-list">
+                    <div class="contact-item">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="text-box">
+                            <h3>Endereço</h3>
+                            <p>Av. Águia de Haia, 761 - Artur Alvim, São Paulo - SP, 08210-590</p>
+                        </div>
                     </div>
-                    <div class="text-box">
-                        <h3>Instagram</h3>
-                        <a href="https://instagram.com/seu_usuario" target="_blank">@seu_usuario</a>
-                    </div>
-                </div>
 
-                <div class="contact-item">
-                    <div class="icon-box">
-                        <i class="fa-brands fa-whatsapp"></i>
+                    <div class="contact-item">
+                        <div class="icon-box">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="text-box">
+                            <h3>Instagram</h3>
+                            <a href="https://instagram.com/seu_usuario" target="_blank">@seu_usuario</a>
+                        </div>
                     </div>
-                    <div class="text-box">
-                        <h3>WhatsApp</h3>
-                        <a href="https://wa.me/51999999999" target="_blank">(11) 99999-9999</a>
+
+                    <div class="contact-item">
+                        <div class="icon-box">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="text-box">
+                            <h3>WhatsApp</h3>
+                            <a href="https://wa.me/5511999999999" target="_blank">(11) 99999-9999</a>
+                            <!-- Corrigido link wa.me com DDI 55 e DDD 11 -->
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="map-container">
-            <div class="map-placeholder">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.853601593759!2d-46.47993852542289!3d-23.53776736072439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce66d62270ff33%3A0x51db7158ede2562a!2sAv.%20%C3%81guia%20de%20Haia%2C%20761%20-%20sala%201%20-%20Artur%20Alvim%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2008210-590!5e0!3m2!1spt-BR!2sbr!4v1779149689231!5m2!1spt-BR!2sbr"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.853601593759!2d-46.47993852542289!3d-23.53776736072439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce66d62270ff33%3A0x51db7158ede2562a!2sAv.%20%C3%81guia%20de%20Haia%2C%20761%20-%20sala%201%20-%20Artur%20Alvim%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2008210-590!5e0!3m2!1spt-BR!2sbr!4v1779149689231!5m2!1spt-BR!2sbr"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
     </section>
+
+    <a href="https://wa.me/5511999999999" class="btn-float-whatsapp" target="_blank" rel="noopener noreferrer"
+        aria-label="Fale conosco no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <button class="btn-float-top" id="btnScrollTop" aria-label="Voltar ao topo da página">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
 
     <section class="container-principal">
         <div class="card-consulta">
@@ -193,34 +315,40 @@
         </div>
     </section>
 
-    <footer>
+    <footer class="main-footer">
         <div class="footer-container">
-            <div class="footer-column logo-column">
-                <div class="logo-placeholder">logo</div>
+
+            <div class="footer-logo-area">
+                <img src="logo.png" alt="Clínica Dra. Nathália Morato - Saúde e Estética" class="footer-logo">
             </div>
 
-            <div class="footer-column contact-column">
-                <h3>WhatsApp</h3>
-                <p>(11) 99999-9999</p>
-
-                <h3>email</h3>
-                <p><a href="mailto:dra.veralope@gmail.com">dra.veralope@gmail.com</a></p>
-
-                <h3>Endereço</h3>
-                <p>Av. Águia de Haia, 761 - Artur Alvim, São Paulo - SP, 08210-590</p>
+            <div class="footer-info-area">
+                <div class="footer-socials">
+                    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
+                <address class="footer-address">
+                    <p>Av. Águia de Haia 761 - Sala 1</p>
+                    <p>Artur Alvim – SP, 08210-590</p>
+                    <a href="https://wa.me/5511949465110" target="_blank" class="footer-phone">
+                        <i class="fa-brands fa-whatsapp"></i> (11) xxxx-xxxxx
+                    </a>
+                </address>
             </div>
 
-            <div class="footer-column nav-column">
-                <h3>Navegue</h3>
-                <ul>
-                    <li><a href="#inicio">início</a></li>
-                    <li><a href="#draVera">Dra. Vera</a></li>
-                    <li><a href="#clinica">A Clínica</a></li>
-                    <li><a href="#ondeEstamo">Onde Estamos</a></li>
-                </ul>
-            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright-text">
+                Copy 2026 Dra. Vera Lopes. Todos os direitos reservados.
+                Desenvolvido por <a href="https://github.com/RafaelSil1" target="_blank">Rafael Sacramento</a>
+            </p>
         </div>
     </footer>
+
+    <script src="javaScript.js"></script>
 
 </body>
 
