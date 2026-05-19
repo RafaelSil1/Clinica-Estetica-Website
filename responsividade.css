@@ -1,0 +1,358 @@
+/* ==========================================================================
+   REGRAS DE RESPONSIVIDADE (MOBILE PREMIUM) - NÃO ALTERA O DESKTOP
+   ========================================================================== */
+@media (max-width: 768px) {
+    
+    /* Configurações Gerais e Tipografia */
+    body {
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        min-height: auto;
+        padding: 50px 24px 30px 24px;
+        background: #ffffff;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .hero-content {
+        align-items: center;
+        gap: 20px;
+    }
+
+    .logo-area .logo {
+        max-width: 160px;
+        margin-bottom: 10px;
+    }
+
+    .main-title {
+        font-size: 2.1rem;
+        line-height: 1.25;
+        letter-spacing: -0.5px;
+    }
+
+    .description {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 0 auto;
+        color: var(--text-light);
+    }
+
+    /* Botões Mobile Estilizados */
+    .btn-cta, .btn-cta-dark, .btn-cta-about, .btn-schedule, .botao-agendar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 320px;
+        padding: 16px 24px;
+        font-size: 1rem;
+        border-radius: 50px;
+        letter-spacing: 0.5px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 8px 20px rgba(74, 59, 44, 0.15);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-cta:active, .btn-cta-dark:active, .btn-cta-about:active, .btn-schedule:active, .botao-agendar:active {
+        transform: scale(0.98);
+    }
+
+    /* Imagem da Hero e Ajuste do Badge */
+    .hero-image-wrapper {
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    .doctor-img {
+        max-width: 85%;
+        margin: 0 auto;
+    }
+
+    .badge-specialist {
+        position: relative;
+        left: auto;
+        top: auto;
+        border-left: none;
+        border-top: 1px solid rgba(58, 46, 36, 0.2);
+        padding-left: 0;
+        padding-top: 12px;
+        margin: 20px auto 0 auto;
+        max-width: 200px;
+        text-align: center;
+        font-size: 0.75rem;
+    }
+
+    /* Suavização dos Ícones Flutuantes no Celular */
+    .floating-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.1rem;
+        border-radius: 50%; /* Redondos ficam mais delicados em telas menores */
+    }
+    .icon-dna { left: 8%; top: 40%; }
+    .icon-heart { right: 8%; top: 20%; }
+    .icon-plus { bottom: 15%; right: 12%; }
+
+    .hero-footer {
+        position: relative;
+        bottom: auto;
+        margin-top: 30px;
+        padding: 0 10px;
+    }
+
+    /* Stats e Bloco de Perfil (Layout em Lista Elegante) */
+    .stats-container {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 24px;
+        background: linear-gradient(180deg, #ffffff 0%, #fcf9f5 100%);
+    }
+
+    .profile-block {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .profile-avatar {
+        width: 90px;
+        height: 90px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+    }
+
+    .stat-box {
+        align-items: center;
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 2.8rem;
+        margin-bottom: 5px;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+        opacity: 0.8;
+    }
+
+    /* Seção de Transformações (Cards Empilhados com Aparência Clean) */
+    .transformations-section {
+        padding: 60px 20px;
+    }
+
+    .section-title {
+        font-size: 1.9rem;
+    }
+
+    .carousel-track {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .transformation-card {
+        width: 100%;
+        min-width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .image-pair {
+        height: 260px; /* Altura ideal para fotos "Antes e Depois" lado a lado no celular */
+    }
+
+    .carousel-btn {
+        display: none; /* Remove as setas antigas pois o scroll agora é vertical */
+    }
+
+    /* Seção Quem Sou (About) */
+    .about-section {
+        padding: 60px 24px;
+        min-height: auto;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .about-image-wrapper {
+        order: -1; /* Garante que a foto do profissional apareça ANTES do texto */
+    }
+
+    .about-img {
+        max-width: 260px;
+        border-radius: 20px;
+    }
+
+    .about-content {
+        gap: 20px;
+    }
+
+    .about-title {
+        font-size: 1.8rem;
+    }
+
+    .about-text p {
+        font-size: 0.95rem;
+        line-height: 1.65;
+    }
+
+    .line-left, .line-right {
+        display: none;
+    }
+
+    /* Galeria de Fotos Modificada para Grade Mobile Elegante */
+    .gallery-container {
+        flex-direction: column;
+        padding: 50px 24px;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .gallery-title {
+        font-size: 1.6rem;
+    }
+
+    /* Transforma a galeria antiga em um layout moderno de 2 colunas no celular */
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: auto !important;
+        gap: 12px !important;
+        width: 100%;
+    }
+
+    .grid-item {
+        width: 100% !important;
+        height: 140px !important;
+        grid-column: auto !important;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+    
+    /* Faz a primeira imagem da galeria ocupar as duas colunas superiores (Destaque) */
+    .item-1 {
+        grid-column: span 2 !important;
+        height: 180px !important;
+    }
+
+    /* Seção de Contato e Mapa */
+    .global {
+        padding: 15px;
+    }
+
+    .container-info {
+        flex-direction: column;
+        margin: 30px auto;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+
+    .info-container {
+        padding: 35px 20px;
+    }
+
+    .header-text h1 {
+        font-size: 1.7rem;
+    }
+
+    .header-text p {
+        margin-bottom: 30px;
+        font-size: 1rem;
+    }
+
+    .contact-list {
+        gap: 25px;
+    }
+
+    .contact-item {
+        gap: 15px;
+    }
+
+    .icon-box {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+    }
+
+    .map-container {
+        padding: 15px;
+    }
+    
+    .map-placeholder, .map-placeholder iframe {
+        width: 100% !important;
+        height: 250px !important;
+        border-radius: 12px;
+    }
+
+    /* Card de Consulta Flutuante */
+    .container-principal {
+        padding: 0 20px;
+    }
+
+    .card-consulta {
+        flex-direction: column;
+        width: 100%;
+        padding: 35px 24px;
+        margin-bottom: 60px;
+        text-align: center;
+        gap: 20px;
+        border-radius: 16px;
+    }
+
+    .titulo {
+        font-size: 1.6rem;
+    }
+
+    .subtitulo {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+
+    /* Rodapé Principal (Footer) */
+    .main-footer {
+        padding: 45px 24px 30px 24px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .footer-logo-area .footer-logo {
+        margin: 0 auto;
+        max-width: 180px;
+    }
+
+    .footer-info-area {
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .footer-address {
+        font-size: 0.85rem;
+    }
+
+    .footer-phone {
+        font-size: 1rem;
+    }
+
+    .footer-bottom {
+        margin-top: 25px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 0.75rem;
+    }
+}
