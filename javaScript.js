@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateCarousel() {
         const itemsPerSlide = getItemsPerSlide();
         const maxIndex = Math.max(0, cards.length - itemsPerSlide);
-        
+
         currentIndex = Math.min(Math.max(currentIndex, 0), maxIndex);
 
         const cardWidth = cards[0]?.getBoundingClientRect().width || 0;
@@ -29,14 +29,20 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("resize", updateCarousel);
     updateCarousel();
 
-    // --- 2. BOTÃO VOLTAR AO TOPO ---
+    // --- 2. BOTÃO VOLTAR AO TOPO (CORRIGIDO) ---
     const btnScrollTop = document.getElementById("btnScrollTop");
-    
+
     window.addEventListener("scroll", () => {
         btnScrollTop.classList.toggle("show", window.scrollY > 400);
     });
-    
-    btnScrollTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    btnScrollTop.addEventListener("click", (e) => {
+        e.preventDefault(); // Impede o navegador de dar o "salto" abrupto instantâneo
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
 
     // --- 3. CONTADORES ANIMADOS (NÚMEROS) ---
     document.querySelectorAll(".stat-number").forEach(counter => {
@@ -50,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!startTime) startTime = currentTime;
             const progressRatio = Math.min((currentTime - startTime) / 2000, 1); // 2000ms fixos
             const currentNumber = Math.floor(progressRatio * targetNumber);
-            
+
             let formatted = currentNumber.toLocaleString("pt-BR");
             if (rawText.trim().startsWith("+")) {
                 formatted = (rawText.includes("+ ") ? "+ " : "+") + formatted;
