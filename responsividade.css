@@ -62,12 +62,14 @@
         letter-spacing: 0.5px;
         margin-left: auto;
         margin-right: auto;
+        background: var(--gold-gradient);
+        color: #ffffff;
         box-shadow: 0 8px 20px rgba(74, 59, 44, 0.15);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .btn-cta:active, .btn-cta-dark:active, .btn-cta-about:active, .btn-schedule:active, .botao-agendar:active {
-        transform: scale(0.98);
+    .btn-cta:hover {
+        transform: none;
+        box-shadow: 0 8px 20px rgba(74, 59, 44, 0.15);
     }
 
     /* Imagem da Hero e Ajuste do Badge */
