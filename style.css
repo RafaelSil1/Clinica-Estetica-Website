@@ -713,15 +713,12 @@ img {
 
 .text-box p,
 .text-box a {
+
     font-size: 0.95rem;
     color: #777777;
     text-decoration: none;
 }
 
-.text-box a:hover {
-    color: #4f46e5;
-    text-decoration: underline;
-}
 
 .map-container {
     padding: 40px;
