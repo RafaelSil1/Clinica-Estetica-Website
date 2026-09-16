@@ -4,44 +4,57 @@
 :root {
     /* Cores Claras / Hero */
     --bg-gradient: linear-gradient(135deg, #f4eee8 0%, #e5dacb 100%);
+    --bg-light-cream: #f9f6f0;
     --text-dark: #3a2e24;
+    --text-dark-brown: #4d3d2d;
     --text-light: #605246;
+    --text-paragraphs: #4a4a4a;
     --primary-gold: #bfa17f;
     --btn-bg: #4a3b2c;
+    --btn-brown: #4d3d2d;
     --btn-hover: #33281e;
     --white-translucent: rgba(255, 255, 255, 0.15);
 
     /* Cores Escuras / Transformações */
     --bg-dark-brown: #4d3d2d;
     --bg-gradient-dark: #BF9663;
-    --text-gold: gold;
+    --text-gold: #ffd700;
     --text-white: #ffffff;
     --text-muted: #d3c4b4;
     --btn-bg-dark: #3a2e22;
     --btn-border-gold: #c5a880;
+    
+    /* Gradientes Reutilizáveis */
+    --gold-gradient: linear-gradient(45deg, #ffd700, #e3aa18);
+    --gold-gradient-hover: linear-gradient(45deg, #ffd700,  #e3aa18);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Montserrat', sans-serif;
-    background: white;
+    background-color: #ffffff;
     color: var(--text-dark);
     min-height: 100vh;
     overflow-x: hidden;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
 /* ==========================================================================
-   LAYOUT E ESTRUTURA (HERO SECTION)
+   HERO SECTION
    ========================================================================== */
 .hero-section {
     position: relative;
@@ -50,11 +63,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px 20px;
-    background-color: #BF9663;
+    padding: 20px;
+    background-color: var(--bg-gradient-dark);
 }
 
-/* Container específico da Hero Section */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -65,7 +77,6 @@ body {
     width: 100%;
 }
 
-/* LADO ESQUERDO - CONTEÚDO */
 .hero-content {
     display: flex;
     flex-direction: column;
@@ -75,15 +86,14 @@ body {
 
 .logo-area .logo {
     max-width: 220px;
-    height: auto;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.12));
 }
 
 .main-title {
-    font-family: 'Montserrat', sans-serif;
     font-size: 2.8rem;
     font-weight: 400;
     line-height: 1.2;
-    color: var(--text-dark);
+    color: #2A1F1B !important;
 }
 
 .main-title .highlight-natural {
@@ -94,45 +104,44 @@ body {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: 600;
-    background: linear-gradient(45deg, gold, rgb(187, 135, 5));
+    background: var(--gold-gradient);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    -webkit-text-fill-color: transparent;
 }
 
 .description {
-    font-size: 1rem;
+    font-size: 1.05rem;
     line-height: 1.6;
-    color: var(--text-light);
+    color: var(--bg-light-cream);
     max-width: 500px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
-/* BOTÃO CTA */
+/* Botões CTA */
 .btn-cta {
     display: inline-block;
     align-self: flex-start;
-    background-color: white;
+    background-color: #ffffff;
     color: #333333;
-    border: 1px solid gold;
+    border: 1px solid var(--text-gold);
     text-decoration: none;
     padding: 16px 36px;
     border-radius: 50px;
     font-size: 0.95rem;
     font-weight: 500;
     box-shadow: 0 4px 15px rgba(74, 59, 44, 0.2);
-    transition: all 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 
 .btn-cta:hover {
-    background: linear-gradient(45deg, gold, rgb(187, 135, 5));
-    color: white;
+    background: var(--gold-gradient);
+    color: #ffffff;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(74, 59, 44, 0.3);
 }
 
-/* LADO DIREITO - IMAGEM E ELEMENTOS */
+/* Lado Direito - Imagem */
 .hero-image-wrapper {
     position: relative;
     display: flex;
@@ -143,13 +152,9 @@ body {
 }
 
 .doctor-img {
-    max-width: 100%;
-    height: auto;
     object-fit: cover;
-    display: block;
 }
 
-/* TAG ESPECIALISTA */
 .badge-specialist {
     position: absolute;
     left: -40px;
@@ -164,13 +169,13 @@ body {
     font-weight: 500;
 }
 
-/* ÍCONES FLUTUANTES */
 .floating-icon {
     position: absolute;
     width: 60px;
     height: 60px;
     background: rgba(212, 175, 131, 0.25);
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 8px;
     display: flex;
@@ -181,23 +186,12 @@ body {
     box-shadow: 0 8px 32px 0 rgba(160, 130, 100, 0.15);
 }
 
-.icon-dna {
-    top: 45%;
-    left: 10%;
-}
-
-.icon-heart {
-    top: 30%;
-    right: 5%;
-}
-
-.icon-plus {
-    bottom: 15%;
-    right: 15%;
-}
+.icon-dna { top: 45%; left: 10%; }
+.icon-heart { top: 30%; right: 5%; }
+.icon-plus { bottom: 15%; right: 15%; }
 
 /* ==========================================================================
-   RODAPÉ INFERIOR E STATS
+   STATS E PERFIL
    ========================================================================== */
 .hero-footer {
     position: absolute;
@@ -219,7 +213,8 @@ body {
     justify-content: space-around;
     width: 100%;
     align-items: center;
-    padding: 20px 0px 50px 0px;
+    padding: 20px 0 50px 0;
+    background-color: #FAF8F5 !important;
 }
 
 .profile-block {
@@ -238,7 +233,7 @@ body {
     justify-content: center;
     text-align: center;
     font-size: 0.85rem;
-    color: #666;
+    color: #666666;
     padding: 10px;
 }
 
@@ -269,16 +264,15 @@ body {
     font-weight: 550;
     line-height: 1;
     margin-bottom: 10px;
-    background: linear-gradient(45deg, gold, rgb(187, 135, 5));
+    background: var(--gold-gradient);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    -webkit-text-fill-color: transparent;
 }
 
 .stat-label {
     font-size: 1rem;
-    color: #222;
+    color: #222222;
 }
 
 /* ==========================================================================
@@ -294,7 +288,6 @@ body {
     position: relative;
     overflow: hidden;
 }
-
 
 .section-header {
     text-align: center;
@@ -313,13 +306,13 @@ body {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: 400;
-    color: #FFD700;
+    color: var(--text-gold);
 }
 
 .section-subtitle {
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--text-muted);
+    color: var(--bg-light-cream);
     font-weight: 300;
 }
 
@@ -343,6 +336,7 @@ body {
     gap: 24px;
     transition: transform 0.4s ease-in-out;
     width: 100%;
+    will-change: transform;
 }
 
 .transformation-card {
@@ -403,21 +397,13 @@ body {
     cursor: pointer;
     padding: 10px;
     z-index: 10;
-    transition: color 0.2s;
+    transition: color 0.2s ease;
     user-select: none;
 }
 
-.carousel-btn:hover {
-    color: var(--text-white);
-}
-
-.prev-btn {
-    margin-right: 10px;
-}
-
-.next-btn {
-    margin-left: 10px;
-}
+.carousel-btn:hover { color: var(--text-white); }
+.prev-btn { margin-right: 10px; }
+.next-btn { margin-left: 10px; }
 
 .action-area {
     width: 100%;
@@ -427,21 +413,21 @@ body {
 
 .btn-cta-dark {
     display: inline-block;
-    background-color: white;
+    background-color: #ffffff;
     color: #333333;
-    border: 1px solid gold;
+    border: 1px solid var(--text-gold);
     text-decoration: none;
     padding: 18px 40px;
     border-radius: 50px;
     font-size: 0.95rem;
     font-weight: 500;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
 }
 
 .btn-cta-dark:hover {
-    background: linear-gradient(45deg, gold, rgb(250, 180, 3));
-    color: white;
+    background: var(--gold-gradient-hover);
+    color: #ffffff;
     transform: translateY(-2px);
 }
 
@@ -480,7 +466,6 @@ body {
 .about-img {
     width: 100%;
     max-width: 380px;
-    height: auto;
     border-radius: 30px;
     box-shadow: 0 15px 35px rgba(58, 46, 36, 0.12);
     object-fit: cover;
@@ -493,7 +478,6 @@ body {
 }
 
 .about-title {
-    font-family: 'Montserrat', sans-serif;
     font-size: 2.3rem;
     font-weight: 300;
     line-height: 1.2;
@@ -504,11 +488,10 @@ body {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: 700;
-    background: linear-gradient(45deg, gold, rgb(187, 135, 5));
+    background: var(--gold-gradient);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    -webkit-text-fill-color: transparent;
 }
 
 .about-text {
@@ -533,20 +516,20 @@ body {
     display: inline-block;
     align-self: flex-start;
     background-color: var(--btn-brown);
-    color: #333333;
-    border: 1px solid gold;
+    color: #ffffff;
+    border: 1px solid var(--text-gold);
     text-decoration: none;
     padding: 16px 36px;
     border-radius: 50px;
     font-size: 0.95rem;
     font-weight: 500;
     box-shadow: 0 4px 15px rgba(74, 59, 44, 0.25);
-    transition: all 0.3s ease;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-cta-about:hover {
-    background: linear-gradient(45deg, gold, rgb(250, 180, 3));
-    color: white;
+    background: var(--gold-gradient-hover);
+    color: #ffffff;
     box-shadow: 0 6px 20px rgba(74, 59, 44, 0.25);
 }
 
@@ -572,13 +555,13 @@ body {
 }
 
 /* ==========================================================================
-   GALERIA / OUTRA SEÇÃO DE CONTEÚDO (Antiga duplicada corrigida)
+   GALERIA / OUTRA SEÇÃO
    ========================================================================== */
 .gallery-container {
     display: flex;
     justify-content: center;
     max-width: 1200px;
-    padding: 40px 0px;
+    padding: 40px 0;
     width: 100%;
     gap: 50px;
     align-items: center;
@@ -593,20 +576,17 @@ body {
     color: #333333;
 }
 
-/* Renomeado para evitar conflito global */
 .gallery-title {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 1.3;
     margin-bottom: 10px;
-    background: linear-gradient(45deg, gold, rgb(187, 135, 5));
+    background: var(--gold-gradient);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    -webkit-text-fill-color: transparent;
 }
 
-/* Renomeado para evitar conflito global */
 .gallery-text {
     font-size: 1rem;
     line-height: 1.5;
@@ -621,17 +601,17 @@ body {
     margin-top: 20px;
     text-decoration: none;
     color: #333333;
-    border: 1px solid gold;
+    border: 1px solid var(--text-gold);
+    border-radius: 20px;
     box-shadow: 0 6px 20px rgba(74, 59, 44, 0.25);
     font-size: 1rem;
     width: fit-content;
-    transition: opacity 0.2s;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
 .btn-schedule:hover {
-    background: linear-gradient(45deg, gold, rgb(250, 180, 3));
-    box-shadow: 0 6px 20px rgba(74, 59, 44, 0.25);
-    color: white;
+    background: var(--gold-gradient-hover);
+    color: #ffffff;
 }
 
 .btn-schedule .icon {
@@ -640,6 +620,8 @@ body {
 
 .image-grid {
     width: 40%;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 
@@ -649,14 +631,11 @@ body {
 }
 
 .item-1 {
-    grid-column: 1 / 2;
     width: 89%;
-    height: auto;
 }
 
-
 /* ==========================================================================
-   SEÇÃO DE INFORMAÇÕES DE CONTATO E MAPA
+   CONTATO E MAPA
    ========================================================================== */
 .container-info {
     display: flex;
@@ -665,17 +644,16 @@ body {
     max-width: 1100px;
     border-radius: 12px;
     margin: 100px auto;
-    /* Centralizado com auto lateral */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .global {
     display: flex;
     justify-content: center;
-    padding: 40px 0px;
+    padding: 40px 0;
 }
 
-.container-info>section {
+.container-info > section {
     display: flex;
     justify-content: center;
 }
@@ -689,17 +667,16 @@ body {
 
 .header-text h1 {
     font-size: 2.2rem;
-    background: linear-gradient(45deg, gold, rgb(187, 135, 5));
+    background: var(--gold-gradient);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    -webkit-text-fill-color: transparent;
     margin-bottom: 8px;
 }
 
 .header-text p {
     font-size: 1.1rem;
-    color: #666;
+    color: #666666;
     margin-bottom: 40px;
 }
 
@@ -724,20 +701,20 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    color: gold;
+    color: var(--text-gold);
     flex-shrink: 0;
 }
 
 .text-box h3 {
     font-size: 1.05rem;
-    color: #444;
+    color: #444444;
     margin-bottom: 2px;
 }
 
 .text-box p,
 .text-box a {
     font-size: 0.95rem;
-    color: #777;
+    color: #777777;
     text-decoration: none;
 }
 
@@ -751,10 +728,11 @@ body {
 }
 
 .map-placeholder {
-    border: 2px dashed gold;
+    border: 2px dashed var(--text-gold);
     border-radius: 8px;
 }
 
+/* Botões Flutuantes */
 .btn-float-whatsapp {
     position: fixed;
     bottom: 20px;
@@ -779,7 +757,6 @@ body {
     transform: scale(1.1);
 }
 
-/* Botão Voltar ao Topo (Direita) */
 .btn-float-top {
     position: fixed;
     bottom: 20px;
@@ -787,7 +764,6 @@ body {
     width: 50px;
     height: 50px;
     background-color: rgba(0, 0, 0, 0.4);
-    /* Preto translúcido como na imagem */
     color: #ffffff;
     border: none;
     border-radius: 50%;
@@ -797,14 +773,12 @@ body {
     font-size: 1.3rem;
     cursor: pointer;
     opacity: 0;
-    /* Começa invisível */
     visibility: hidden;
     pointer-events: none;
     z-index: 9999;
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* Classe que o JavaScript vai injetar quando rolar a página */
 .btn-float-top.show {
     opacity: 1;
     visibility: visible;
@@ -816,6 +790,7 @@ body {
     transform: translateY(-3px);
 }
 
+/* Card de Consulta */
 .container-principal {
     display: flex;
     justify-content: center;
@@ -833,22 +808,19 @@ body {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.205);
 }
 
-/* Área reservada para a foto */
 .foto-container {
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 4px;
     flex-shrink: 0;
-    /* Impede que a foto esmague em telas menores */
 }
 
 .foto-container span {
     font-size: 24px;
-    color: #333;
+    color: #333333;
 }
 
-/* Lado direito do layout */
 .conteudo-container {
     display: flex;
     flex-direction: column;
@@ -858,12 +830,11 @@ body {
 .titulo {
     font-size: 32px;
     margin-bottom: 15px;
-    font-weight: bold;
-    background: linear-gradient(45deg, gold, rgb(187, 135, 5));
+    font-weight: 700;
+    background: var(--gold-gradient);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    -webkit-text-fill-color: transparent;
 }
 
 .subtitulo {
@@ -872,39 +843,33 @@ body {
     margin-bottom: 30px;
 }
 
-/* Estilização do Botão */
 .botao-agendar {
     display: inline-block;
     background-color: #ffffff;
-    /* Cor de fundo clara do botão */
     color: #2c313c;
     text-decoration: none;
     text-align: center;
     padding: 12px 24px;
     font-size: 16px;
-    border: 1px solid gold;
+    border: 1px solid var(--text-gold);
     box-shadow: 0 6px 20px rgba(74, 59, 44, 0.25);
-    border-radius: 4px;
+    border-radius: 15px;
     width: fit-content;
-    transition: background-color 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
-/* Efeito de passar o mouse no botão */
 .botao-agendar:hover {
-    background: linear-gradient(45deg, gold, rgb(187, 135, 5));
-    box-shadow: 0 6px 20px rgba(74, 59, 44, 0.25);
-    color: white;
+    background: var(--gold-gradient);
+    color: #ffffff;
 }
-
 
 /* ==========================================================================
-   RODAPÉ DO SITE (FOOTER)
+   FOOTER
    ========================================================================== */
 .main-footer {
     background-color: #BF9663;
     color: #000000;
     padding: 60px 20px 30px 20px;
-    font-family: 'Montserrat', sans-serif;
     font-size: 0.9rem;
     width: 100%;
 }
@@ -917,17 +882,12 @@ body {
     align-items: center;
     padding-bottom: 40px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    /* Linha divisória sutil */
 }
 
-/* Lado Esquerdo - Logo */
 .footer-logo-area .footer-logo {
     max-width: 260px;
-    height: auto;
-    display: block;
 }
 
-/* Lado Direito - Info e Redes */
 .footer-info-area {
     display: flex;
     flex-direction: column;
@@ -948,15 +908,12 @@ body {
     text-decoration: none;
 }
 
-.footer-socials a:hover {
-    opacity: 0.7;
-}
+.footer-socials a:hover { opacity: 0.7; }
 
 .footer-address {
     font-style: normal;
     line-height: 1.6;
     color: #e5dacb;
-    /* Tom de texto claro sutil */
 }
 
 .footer-phone {
@@ -971,15 +928,9 @@ body {
     transition: opacity 0.2s ease;
 }
 
-.footer-phone i {
-    font-size: 1.3rem;
-}
+.footer-phone i { font-size: 1.3rem; }
+.footer-phone:hover { opacity: 0.8; }
 
-.footer-phone:hover {
-    opacity: 0.8;
-}
-
-/* Parte de Baixo - Textos Legais */
 .footer-bottom {
     max-width: 1200px;
     margin: 30px auto 0 auto;
@@ -998,18 +949,15 @@ body {
     transition: opacity 0.2s ease;
 }
 
-.footer-bottom a:hover {
-    opacity: 0.8;
-}
+.footer-bottom a:hover { opacity: 0.8; }
 
-/* Estado inicial: escondido, transparente e deslocado 50px para baixo */
+/* Animações Scroll */
 .hidden-element {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Estado final: visível e na posição original */
 .show-element {
     opacity: 1;
     transform: translateY(0);

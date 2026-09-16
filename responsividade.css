@@ -45,8 +45,12 @@
         color: var(--text-light);
     }
 
+    .btn-cta-dark, .btn-schedule {
+        display: none;
+    }
+
     /* Botões Mobile Estilizados */
-    .btn-cta, .btn-cta-dark, .btn-cta-about, .btn-schedule, .botao-agendar {
+    .btn-cta, .btn-cta-about, .botao-agendar {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -73,7 +77,7 @@
     }
 
     .doctor-img {
-        max-width: 85%;
+        max-width: 100%;
         margin: 0 auto;
     }
 
@@ -215,7 +219,6 @@
     .gallery-container {
         flex-direction: column;
         padding: 50px 24px;
-        gap: 35px;
         text-align: center;
     }
 
@@ -226,7 +229,6 @@
     /* Transforma a galeria antiga em um layout moderno de 2 colunas no celular */
     .image-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr) !important;
         grid-template-rows: auto !important;
         gap: 12px !important;
         width: 100%;
@@ -234,16 +236,17 @@
 
     .grid-item {
         width: 100% !important;
-        height: 140px !important;
+        height: 200px !important;
         grid-column: auto !important;
         border-radius: 8px;
+        object-position: center top;
         object-fit: cover;
     }
     
     /* Faz a primeira imagem da galeria ocupar as duas colunas superiores (Destaque) */
     .item-1 {
         grid-column: span 2 !important;
-        height: 180px !important;
+        height: 280px !important;
     }
 
     /* Seção de Contato e Mapa */
