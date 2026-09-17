@@ -127,16 +127,6 @@ img {
   line-height: 1.4;
 }
 
-/* Responsivo para celulares */
-@media (max-width: 600px) {
-  .faq-title {
-    font-size: 1.6rem;
-  }
-  .faq-item {
-    padding: 18px;
-  }
-}
-
 /* ==========================================================================
    HERO SECTION
    ========================================================================== */
