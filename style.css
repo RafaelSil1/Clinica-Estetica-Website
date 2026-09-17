@@ -412,7 +412,7 @@ img {
 .carousel-track-wrapper {
     width: 100%;
     overflow: hidden;
-    padding: 10px 0;
+    padding: 10px 0px 35px 0px;
 }
 
 .carousel-track {
