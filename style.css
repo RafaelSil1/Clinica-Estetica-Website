@@ -53,6 +53,90 @@ img {
     display: block;
 }
 
+/* --- SEÇÃO FAQ / SEO --- */
+.faq-seo-section {
+  padding: 60px 20px;
+  background-color: #f9f8f6;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #333;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-subtitle {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  color: var(--text-gold); /* Cor Rose Gold/Elegante */
+  font-weight: 600;
+  display: block;
+  text-align: center;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 10px 0 15px;
+  color: #222;
+}
+
+.faq-description {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+.faq-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.faq-item {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 4px solid var(--text-gold);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.faq-question {
+  font-size: 1.2rem;
+  color: #1a1a1a;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.faq-answer {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin-bottom: 15px;
+}
+
+.faq-keywords {
+  font-size: 0.85rem;
+  background-color: #f3ece8;
+  color: #7a584d;
+  padding: 10px 15px;
+  border-radius: 6px;
+  line-height: 1.4;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 600px) {
+  .faq-title {
+    font-size: 1.6rem;
+  }
+  .faq-item {
+    padding: 18px;
+  }
+}
+
 /* ==========================================================================
    HERO SECTION
    ========================================================================== */
@@ -910,6 +994,7 @@ img {
 .footer-address {
     font-style: normal;
     line-height: 1.6;
+    text-decoration: none;
     color: #e5dacb;
 }
 
@@ -957,5 +1042,5 @@ img {
 
 .show-element {
     opacity: 1;
-    transform: translateY(0);
+
 }

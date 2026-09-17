@@ -2,7 +2,7 @@
    REGRAS DE RESPONSIVIDADE (MOBILE PREMIUM) - NÃO ALTERA O DESKTOP
    ========================================================================== */
 @media (max-width: 768px) {
-    
+
     /* Configurações Gerais e Tipografia */
     body {
         overflow-x: hidden;
@@ -45,12 +45,15 @@
         color: var(--text-light);
     }
 
-    .btn-cta-dark, .btn-schedule {
+    .btn-cta-dark,
+    .btn-schedule {
         display: none;
     }
 
     /* Botões Mobile Estilizados */
-    .btn-cta, .btn-cta-about, .botao-agendar {
+    .btn-cta,
+    .btn-cta-about,
+    .botao-agendar {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -102,11 +105,24 @@
         width: 42px;
         height: 42px;
         font-size: 1.1rem;
-        border-radius: 50%; /* Redondos ficam mais delicados em telas menores */
+        border-radius: 50%;
+        /* Redondos ficam mais delicados em telas menores */
     }
-    .icon-dna { left: 8%; top: 40%; }
-    .icon-heart { right: 8%; top: 20%; }
-    .icon-plus { bottom: 15%; right: 12%; }
+
+    .icon-dna {
+        left: 8%;
+        top: 40%;
+    }
+
+    .icon-heart {
+        right: 8%;
+        top: 20%;
+    }
+
+    .icon-plus {
+        bottom: 15%;
+        right: 12%;
+    }
 
     .hero-footer {
         position: relative;
@@ -132,7 +148,7 @@
     .profile-avatar {
         width: 90px;
         height: 90px;
-        box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
     }
 
     .stat-box {
@@ -172,11 +188,13 @@
     }
 
     .image-pair {
-        height: 260px; /* Altura ideal para fotos "Antes e Depois" lado a lado no celular */
+        height: 260px;
+        /* Altura ideal para fotos "Antes e Depois" lado a lado no celular */
     }
 
     .carousel-btn {
-        display: none; /* Remove as setas antigas pois o scroll agora é vertical */
+        display: none;
+        /* Remove as setas antigas pois o scroll agora é vertical */
     }
 
     /* Seção Quem Sou (About) */
@@ -192,7 +210,8 @@
     }
 
     .about-image-wrapper {
-        order: -1; /* Garante que a foto do profissional apareça ANTES do texto */
+        order: -1;
+        /* Garante que a foto do profissional apareça ANTES do texto */
     }
 
     .about-img {
@@ -213,7 +232,8 @@
         line-height: 1.65;
     }
 
-    .line-left, .line-right {
+    .line-left,
+    .line-right {
         display: none;
     }
 
@@ -244,7 +264,7 @@
         object-position: center top;
         object-fit: cover;
     }
-    
+
     /* Faz a primeira imagem da galeria ocupar as duas colunas superiores (Destaque) */
     .item-1 {
         grid-column: span 2 !important;
@@ -260,7 +280,7 @@
         flex-direction: column;
         margin: 30px auto;
         border-radius: 16px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     }
 
     .info-container {
@@ -293,8 +313,9 @@
     .map-container {
         padding: 15px;
     }
-    
-    .map-placeholder, .map-placeholder iframe {
+
+    .map-placeholder,
+    .map-placeholder iframe {
         width: 100% !important;
         height: 250px !important;
         border-radius: 12px;
@@ -323,6 +344,17 @@
         font-size: 0.95rem;
         margin-bottom: 20px;
     }
+
+    /* Responsivo para celulares */
+
+    .faq-title {
+        font-size: 1.6rem;
+    }
+
+    .faq-item {
+        padding: 18px;
+    }
+
 
     /* Rodapé Principal (Footer) */
     .main-footer {
