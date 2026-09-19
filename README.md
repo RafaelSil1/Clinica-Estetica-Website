@@ -1,4 +1,4 @@
-# 💅 Website Institucional - Clínica de Estética
+# Website Institucional - Clínica de Estética
 
 Um website moderno, elegante e totalmente responsivo desenvolvido para uma clínica de estética. O objetivo do projeto é apresentar os serviços oferecidos, facilitar o contato com clientes e proporcionar uma experiência agradável de navegação.
 
@@ -18,7 +18,7 @@ Este projeto foi construído com as seguintes tecnologias:
 
 * **HTML5:** Estruturação semântica das páginas e otimização para SEO (Sitemap e Meta Tags).
 * **CSS3:** Estilização personalizada, layout responsivo e transições suaves.
-* **JavaScript:** Interatividade da página, animações e lógica de formulários/menu.
+* **JavaScript:** Interatividade da página.
 
 ---
 
@@ -27,4 +27,3 @@ Este projeto foi construído com as seguintes tecnologias:
 - 📱 **Design Responsivo:** Adaptado para celulares, tablets e computadores.
 - 🎨 **Interface Elegante:** Paleta de cores e tipografia pensadas para o segmento de estética e bem-estar.
 - 🎯 **Otimização SEO:** Estruturado com tags semânticas e suporte a `sitemap.xml` para melhor ranqueamento no Google.
-- ⚡ **Navegação Rápida:** Código leve e otimizado sem dependência de frameworks pesados.
