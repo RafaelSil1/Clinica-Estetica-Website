@@ -8,7 +8,7 @@ Um website moderno, elegante e totalmente responsivo desenvolvido para uma clín
 
 ## 📸 Demonstração
 
-![Preview do Website](./imagem/screenshot-1789843319008)
+![Preview do Website](./imagem/screenshot-1789843319008.png)
 
 ---
 
